@@ -18,7 +18,8 @@ if (Meteor.isServer) {
                     text: itemTwo,
                     value: 0,
                   }
-                });           
+                }); 
+                Roles.addUsersToRoles(Meteor.userId(), 'submitter');
             }
         },
         voteItemOne(id) {
@@ -31,7 +32,8 @@ if (Meteor.isServer) {
                     $set: {
                         lastUpdated: date
                     }
-                });             
+                });
+                Roles.addUsersToRoles(Meteor.userId(), 'voter');
             }
         },
         voteItemTwo(id) {
@@ -44,7 +46,8 @@ if (Meteor.isServer) {
                     $set: {
                         lastUpdated
                     }
-                });             
+                });  
+                Roles.addUsersToRoles(Meteor.userId(), 'voter');
             }
         },
         insertNewComment(comment) {

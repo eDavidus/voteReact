@@ -1,0 +1,18 @@
+{
+    "admins": [
+            "test@test1.com",
+            "test@test2.com",
+            "test@test3.com"
+        ],
+    "public": {
+        "emails": [
+                "test@test4.com",
+                "test@test5.com",
+                "test@test6.com"
+            ],
+        "startapp": [
+                "How to start the app",
+                "meteor --port $IP:$PORT --settings settings.json "
+            ]
+    }
+}
