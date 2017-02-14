@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
     Router,
     Route,
     IndexRoute,
@@ -18,6 +18,8 @@ Meteor.startup(() => {
         <Route path="/" component={MainLayout}>
           <IndexRoute component={App} />
           <Route path="/comments" component={CommentBox} />
+          // should be bellow the "comment" path
+          <Route path="/item/:id" component={App} />
         </Route>
       </Router>,
       document.getElementById('render-target')

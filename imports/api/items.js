@@ -34,7 +34,7 @@ const ItemsSchema = new SimpleSchema({
     // },
     // 'itemOne.value': {
     //     type: SimpleSchema.Integer
-    // }, 
+    // },
     //
 //     lastUpdated: {
 //         type: Date,
@@ -60,11 +60,11 @@ const ItemsSchema = new SimpleSchema({
 Items.attachSchema(ItemsSchema);
 
 if (Meteor.isServer) {
-   
+
     // all items available to client
     Meteor.publish('allItems', function() {
         return Items.find({}, {
-          limit: 20,
+          limit: 50,
           sort: {lastUpdated: 1}
         });
     });

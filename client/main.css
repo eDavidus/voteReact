@@ -491,3 +491,24 @@ button[type='submit'] {
   background: #EEE;
 }
 
+.item-enter, .item-appear {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.item-enter-active, .item-appear-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.item-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.item-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
